@@ -34,9 +34,6 @@ sudo adduser --system --home=/opt/odoo --group odoo
 sudo apt-get install -y postgresql
 sudo pg_createcluster 9.3 main --start
 sudo su - postgres -c "createuser --createdb --username postgres --no-createrole --no-superuser --no-password odoo"
-sudo su - postgres -c "psql << EOF
-    ALTER USER odoo WITH PASSWORD '4O0hOk3@IkNq8Mx@&5^t';
-EOF"
 
 # Install the necessary Python libraries for the server
 sudo apt-get install -y python-cups python-dateutil python-decorator python-docutils python-feedparser \
